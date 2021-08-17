@@ -1,0 +1,91 @@
+{
+	"variables": [],
+	"info": {
+		"name": "web-cert-checker",
+		"_postman_id": "9787c2e8-cc75-3dde-70ec-d951a9d7f286",
+		"description": "Rest API that allows verifying the status of the SSL certificate of one or more web domains",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "127.0.0.1:8000/api/v1/test",
+			"request": {
+				"url": "127.0.0.1:8000/api/v1/test",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/api/v1/sslchecker",
+			"request": {
+				"url": "127.0.0.1:8000/api/v1/sslchecker",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "host",
+							"value": "github.com",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "531e7eb0-36ee-4f36-bcda-74db5b7578c2",
+					"name": "127.0.0.1:8000/api/v1/sslchecker",
+					"originalRequest": {
+						"url": "127.0.0.1:8000/api/v1/sslchecker",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "host",
+									"value": "xyz",
+									"description": "",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "content-length",
+							"key": "content-length",
+							"value": "58",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json; charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Mon, 16 Aug 2021 03:14:17 GMT",
+							"description": "The date and time that the message was sent"
+						}
+					],
+					"cookie": [],
+					"responseTime": 21,
+					"body": "{\"message\":\"you must provide a hostname\",\"status\":\"error\"}"
+				}
+			]
+		}
+	]
+}
